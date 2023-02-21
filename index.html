@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>	
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('4.png');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+ 
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+@media only screen and (max-width: 1000px) {
+        .bgimg {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 1000px) {
+        .middle {
+        
+        /* image-resolution: 500px; */
+        font-size: 500%;
+
+        }
+      }
+
+
+</style>
+<body>
+
+<div class="bgimg">
+</div>
+
+	<!-- /* <div class="topleft">
+		<img src="logo2.png" width="200" height="90" alt="CODLINE.AI" />
+		</div> */ -->
+
+
+
+
+  <div class="middle">
+    <img src="logo.png" alt="CODLINE.AI" />
+    <h1>COMING SOON</h1>
+	<div id="cspio-socialprofiles">
+		<a href="" target="_blank"><i class="fa fa-instagram "style="color:black"></i></a>			
+		<a href="" target="_blank"><i class="fa fa-facebook-official "style="color:black"></i></a>			
+		<a href="" target="_blank"><i class="fa fa-twitter "style="color:black"></i></a>			
+		<a href="mailto:info@asterisc.in" target="_blank"><i class="fa fa-envelope "style="color:black"></i></a>			
+	</div>
+
+    <p id="demo" style="font-size:30px"></p>
+ 
+
+  
+ 
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 28, 2023 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</div>
+</body>
+</html>
